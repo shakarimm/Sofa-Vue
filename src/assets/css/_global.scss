@@ -1,0 +1,38 @@
+// Глобальные стили, здесь же задаю "container"
+
+html,
+body {
+	height: 100%;
+}
+
+body{
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+label{
+  margin-right: 30px;
+	margin-left: 40px;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+.container{
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 12px;
+}

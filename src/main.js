@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import App from './App'
 import router from './router'
-import store from './store'
+import InlineSvg from 'vue-inline-svg';
 
-createApp(App).use(store).use(router).mount('#app')
+
+createApp(App).use(router).component('inline-svg', InlineSvg).mount('#app')
