@@ -58,7 +58,9 @@
       <swiper-slide
         v-for="(smallImage, idx) in smallImages"
         :key="idx"
-        style="width: 180px; height: 180px; margin-right: 10px"
+        style="width: 170px; height: 120px; margin-right: 10px"
+        :style="{border: smallImage.border, borderRadius: smallImage.borderRadius, padding}"
+        @click="borderImage(idx)"
         ><img 
           style="width: 160px" 
           :src="smallImage.img"
@@ -105,12 +107,24 @@ export default {
   data() {
     return {
       thumbsSwiper: null,
+      // border: 'none', 
+      // borderRadius: 'none',
+      padding: '20px 5px'
     };
   },
   methods: {
     setThumbsSwiper(swiper) {
       this.thumbsSwiper = swiper;
     },
+    borderImage(idx){
+      this.smallImages.map((smallImage) => {
+        smallImage.border = 'none';
+        smallImage.borderRadius = 'none';
+      });
+      this.smallImages[idx].border = '1px solid #007DAD'
+      this.smallImages[idx].borderRadius = '8px'
+      // console.log(idx)
+    }
   },
 };
 </script>

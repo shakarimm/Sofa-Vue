@@ -82,14 +82,20 @@ export default {
       smallImages: [
         {
           img: require("../assets/images/slider-1.png"),
+          border: 'none',
+          borderRadius: 'none',
         },
 
         {
           img: require("../assets/images/slider-2.png"),
+          border: 'none',
+          borderRadius: 'none',
         },
 
         {
           img: require("../assets/images/slider-3.png"),
+          border: 'none',
+          borderRadius: 'none',
         },
       ],
       //Картинки верхнего слайдера
